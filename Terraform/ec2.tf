@@ -1,5 +1,5 @@
 module "ec2_instance" {
-  source  = ""
+  source  = "terraform-aws-modules/ec2-instance/aws"
 
   name = "Jenkins"
 
