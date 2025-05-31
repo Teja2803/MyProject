@@ -6,7 +6,7 @@ module "ec2_instance" {
   instance_type          = "t2.medium"
   key_name               = "key"
   monitoring             = true
-  vpc_security_group_ids = module.vpc.vpc_security_group_ids
+  vpc_security_group_ids = module.vpc.default_security_group_id
   subnet_id              = module.vpc.public_subnets.subnet_id
 
   tags = {
