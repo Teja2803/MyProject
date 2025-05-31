@@ -5,6 +5,8 @@ module "ec2_instance" {
   name = "Jenkins"
 
   instance_type          = "t2.medium"
+  ami                    = "ami-0e35ddab05955cf57"
+  iam_instance_profile    = "ec2"
   key_name               = "key"
   monitoring             = true
   vpc_security_group_ids = [module.vpc.default_security_group_id]
