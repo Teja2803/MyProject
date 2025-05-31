@@ -6,8 +6,8 @@ module "ec2_instance" {
   instance_type          = "t2.medium"
   key_name               = "key"
   monitoring             = true
-  vpc_security_group_ids = module.aws.vpc_security_group_ids
-  subnet_id              = module.aws.vpc.public_subnets.subnet_id
+  vpc_security_group_ids = module.vpc.vpc_security_group_ids
+  subnet_id              = module.vpc.public_subnets.subnet_id
 
   tags = {
     Terraform   = "true"
