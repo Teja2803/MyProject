@@ -6,7 +6,7 @@ module "ec2_instance" {
 
   instance_type          = "t2.medium"
   ami                    = "ami-0e35ddab05955cf57"
-  public_ip             = true
+  associate_public_ip_address             = true
   iam_instance_profile    = "ec2"
   key_name               = "key"
   monitoring             = true
