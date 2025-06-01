@@ -4,8 +4,6 @@ kind: ClusterConfig
 metadata:
   name: my-private-cluster
   region: ap-south-1
-availabilityZones: ["ap-south-1a", "ap-south-1b","ap-south-1c"]
-
 
 vpc:
   subnets:
