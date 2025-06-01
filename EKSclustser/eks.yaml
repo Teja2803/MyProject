@@ -31,8 +31,6 @@ nodeGroups:
       - subnet-0b7103d59c70ad17f
       - subnet-03626c1802a76636f
       - subnet-0dd0a66ab031b8798
-    ssh:
-      allow: true
   - name: ng-private-2
     instanceType: t3.medium
     labels: { app: critical }
