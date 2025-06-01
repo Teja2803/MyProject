@@ -31,8 +31,11 @@ nodeGroups:
       - subnet-0b7103d59c70ad17f
       - subnet-03626c1802a76636f
       - subnet-0dd0a66ab031b8798
+    ssh:
+      allow: true
   - name: ng-private-2
     instanceType: t3.medium
+    labels: { app: critical }
     desiredCapacity: 1
     minSize: 1
     maxSize: 3
@@ -41,3 +44,7 @@ nodeGroups:
       - subnet-0b7103d59c70ad17f
       - subnet-03626c1802a76636f
       - subnet-0dd0a66ab031b8798
+    taints:
+      - key: app
+        value: "critical"
+        effect: NoSchedule
