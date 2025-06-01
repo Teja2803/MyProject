@@ -4,6 +4,8 @@ kind: ClusterConfig
 metadata:
   name: my-private-cluster
   region: ap-south-1
+availabilityZones: ["ap-south-1a", "ap-south-1b","ap-south-1c"]
+
 
 vpc:
   subnets:
@@ -27,6 +29,7 @@ nodeGroups:
     minSize: 1
     maxSize: 3
     privateNetworking: true
+    availabilityZones: ["ap-south-1a"]
     subnets:
       - subnet-0b7103d59c70ad17f
       - subnet-03626c1802a76636f
@@ -40,11 +43,12 @@ nodeGroups:
     minSize: 1
     maxSize: 3
     privateNetworking: true
+    availabilityZones: ["ap-south-1b"]
     subnets:
       - subnet-0b7103d59c70ad17f
       - subnet-03626c1802a76636f
       - subnet-0dd0a66ab031b8798
     taints:
-      - key: app
+      - key: "app"
         value: "critical"
         effect: NoSchedule
