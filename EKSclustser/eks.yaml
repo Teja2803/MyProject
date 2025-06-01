@@ -29,7 +29,6 @@ nodeGroups:
     minSize: 1
     maxSize: 3
     privateNetworking: true
-    availabilityZones: ["ap-south-1a"]
     subnets:
       - subnet-0b7103d59c70ad17f
       - subnet-03626c1802a76636f
@@ -43,7 +42,6 @@ nodeGroups:
     minSize: 1
     maxSize: 3
     privateNetworking: true
-    availabilityZones: ["ap-south-1b"]
     subnets:
       - subnet-0b7103d59c70ad17f
       - subnet-03626c1802a76636f
